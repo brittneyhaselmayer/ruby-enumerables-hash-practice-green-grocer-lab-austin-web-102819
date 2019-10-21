@@ -1,6 +1,3 @@
-require "pry"
-
-
 def consolidate_cart(cart)
  new_hash={}
  cart.each do |element_hash|
@@ -25,6 +22,7 @@ def apply_coupons(cart, coupons)
    
    coupons.each do |coupon|
     item = coupon[:item]
+    
     if cart[item] 
      
       if cart[item][:count] >= coupon[:num] && !cart["#{item} W/COUPON"]
